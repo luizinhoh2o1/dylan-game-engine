@@ -23,7 +23,7 @@ O objetivo principal deste projeto é explorar a criação de uma engine de jogo
 - **Linguagem:** C++23
 - **Biblioteca gráfica:** SDL3
 - **Build System:** CMake
-- **IDE recomendada:** CLion ou Visual Studio Code
+- **IDE recomendada:** CLion
 - **Licença:** Apache 2.0
 
 ---
