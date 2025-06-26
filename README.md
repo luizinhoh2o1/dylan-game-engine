@@ -1,7 +1,6 @@
 # 🕹️ Dylan Game Engine
 
-Dylan Game Engine é uma engine de jogos 2D que está sendo criada do zero.
-Sendo desenvolvida utilizando **C++23** e a biblioteca **SDL3**.
+Dylan Game Engine é uma engine de jogos 2D que está sendo criada do zero, desenvolvida utilizando **C++23** e a biblioteca **SDL3**.
 
 ---
 
