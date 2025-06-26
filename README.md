@@ -6,8 +6,9 @@ Dylan Game Engine é uma engine de jogos 2D que está sendo criada do zero, dese
 
 ## 🚀 Objetivo
 
-O objetivo principal deste projeto é explorar a criação de uma engine de jogos do zero, implementando funcionalidades como:
+O objetivo principal é explorar a criação de uma engine de jogos do zero e tratar o projeto como um desafio pessoal, considerando que não possuo expertize na área de desenvolvimento de jogos e linguagem C++.
 
+Serão implementadas funcionalidades como:
 - Gerenciamento de janelas e renderização com SDL3
 - Sistema de entidades e componentes (ECS)
 - Manipulação de entradas (teclado, mouse, controle)
