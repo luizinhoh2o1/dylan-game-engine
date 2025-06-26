@@ -28,11 +28,11 @@ O objetivo principal deste projeto é explorar a criação de uma engine de jogo
 
 ---
 
-## 🟡 Em desenvolvimento inicial
+## ⚙️ Em desenvolvimento inicial
 
-### ✅ Funcionalidades já implementadas
-### 🛠️ Funcionalidades em andamento
-### ⛔️ Funcionalidades pendentes
+[✅] Funcionalidades já implementadas
+[🛠️] Funcionalidades em andamento
+[⛔️] Funcionalidades pendentes
 
 - 🛠️ Janela e loop principal
 - ⛔️ Renderização básica com SDL3
