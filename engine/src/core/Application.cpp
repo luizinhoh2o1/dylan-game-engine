@@ -11,7 +11,7 @@ Application::Application() {
         return;
     }
 
-    window_ = SDL_CreateWindow("Dylan Game Engine", 800, 600, SDL_WINDOW_RESIZABLE);
+    window_ = SDL_CreateWindow("Dylan Game Engine", 800, 600, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
     if (!window_) {
         std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << "\n";
         running_ = false;
