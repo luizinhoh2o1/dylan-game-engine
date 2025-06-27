@@ -1,7 +1,6 @@
-﻿#include "Core/Application.h"
+﻿#include "core/Application.h"
 
-int main() {
-    dylan::Application app;
-    app.Run();
-    return 0;
+int main(int argc, char** argv) {
+  Application app;
+  return app.run(argc, argv);
 }
