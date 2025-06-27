@@ -5,13 +5,13 @@
 #define FPS 60
 
 Application::Application() {
-    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+    if (!SDL_Init(SDL_INIT_VIDEO)) {
         std::cerr << "SDL_Init Error: " << SDL_GetError() << "\n";
         running_ = false;
         return;
     }
 
-    window_ = SDL_CreateWindow("Dylan Game Engine", 800, 600, SDL_WINDOW_OPENGL);
+    window_ = SDL_CreateWindow("Dylan Game Engine", 800, 600, SDL_WINDOW_RESIZABLE);
     if (!window_) {
         std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << "\n";
         running_ = false;
@@ -29,8 +29,8 @@ Application::Application() {
 }
 
 Application::~Application() {
-    if(renderer_) SDL_DestroyRenderer(renderer_);
-    if(window_) SDL_DestroyWindow(window_);
+    if (renderer_) SDL_DestroyRenderer(renderer_);
+    if (window_) SDL_DestroyWindow(window_);
     SDL_Quit();
 }
 
@@ -70,7 +70,7 @@ void Application::update(float dt) {
 void Application::render() {
     SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 255);
     SDL_RenderClear(renderer_);
-    // TODO: render game entities here
+    // TODO: desenhar entidades da cena aqui
 
     SDL_RenderPresent(renderer_);
 }
