@@ -35,9 +35,9 @@ Serão implementadas funcionalidades como:
 [⛔️] Funcionalidades pendentes.  
 
 - ✅ Janela e loop principal
-- 🛠️ Renderização básica com SDL3
-- 🛠️ Entrada do teclado
-- ⛔️ Sistema de entidades e componentes
+- ✅ Renderização básica com SDL3
+- ✅ Entrada do teclado
+- 🛠️ Sistema de entidades e componentes
 - ⛔️ Carregamento de texturas
 - ⛔️ Engine de áudio
 - ⛔️ Editor visual
