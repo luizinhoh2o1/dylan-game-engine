@@ -1,6 +1,7 @@
 ﻿#include "core/Application.h"
+#include "core/GameLoop.h"
 
 int main(int argc, char** argv) {
   Application app;
-  return app.run(argc, argv);
+  return run_game_loop(app);
 }

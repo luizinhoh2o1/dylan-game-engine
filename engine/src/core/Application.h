@@ -8,15 +8,23 @@ public:
     Application();
     ~Application();
 
-    int run(int argc, char** argv);
-
-private:
-    void process_input();
     void update(float dt);
     void render();
+    void stop();
 
-    bool running_;
-    SDL_Window* window_;
-    SDL_Renderer* renderer_;
+    // Getters
+    bool is_running() const;
+    SDL_Renderer* get_renderer() const;
+    entt::registry& get_registry();
+    float get_player_speed() const;
+
+private:
+    void init_entities();
+
+    bool running_ = true;
+    float player_speed_ = 200.0f;
+
+    SDL_Window* window_ = nullptr;
+    SDL_Renderer* renderer_ = nullptr;
     entt::registry registry_;
 };
