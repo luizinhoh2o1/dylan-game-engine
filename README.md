@@ -21,7 +21,7 @@ Serão implementadas funcionalidades como:
 ## 🧰 Tecnologias e Ferramentas
 
 - **Linguagem:** C++23
-- **Biblioteca gráfica:** SDL3
+- **Bibliotecas:** SDL3, ImGUI e EnTT
 - **Build System:** CMake
 - **IDE recomendada:** CLion
 - **Licença:** Apache 2.0
