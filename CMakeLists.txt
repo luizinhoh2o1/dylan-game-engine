@@ -4,8 +4,9 @@ project(dylan_game_engine)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# SDL3
 include(FetchContent)
+
+# SDL3
 FetchContent_Declare(
         SDL3
         GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
@@ -21,7 +22,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(entt)
 
-# Fetch ImGui
+# ImGui
 FetchContent_Declare(
         imgui
         GIT_REPOSITORY https://github.com/ocornut/imgui
@@ -29,7 +30,8 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(imgui)
 
-add_library(imgui_custom
+# ImGui custom build
+add_library(imgui_custom STATIC
         ${imgui_SOURCE_DIR}/imgui.cpp
         ${imgui_SOURCE_DIR}/imgui_draw.cpp
         ${imgui_SOURCE_DIR}/imgui_tables.cpp
@@ -42,6 +44,8 @@ add_library(imgui_custom
 target_include_directories(imgui_custom PUBLIC
         ${imgui_SOURCE_DIR}
         ${imgui_SOURCE_DIR}/backends
+        ${SDL3_SOURCE_DIR}/include
+        ${SDL3_BINARY_DIR}/include-revision
 )
 
 add_library(imgui::imgui ALIAS imgui_custom)
@@ -55,10 +59,14 @@ add_executable(dylan_game_engine ${ENGINE_SOURCES})
 
 target_include_directories(dylan_game_engine PRIVATE
         engine/src
+        ${imgui_SOURCE_DIR}
+        ${imgui_SOURCE_DIR}/backends
+        ${SDL3_SOURCE_DIR}/include
+        ${SDL3_BINARY_DIR}/include-revision
 )
 
 target_link_libraries(dylan_game_engine PRIVATE
-        SDL3::SDL3
-        EnTT::EnTT
         imgui::imgui
+        EnTT::EnTT
+        SDL3::SDL3
 )
