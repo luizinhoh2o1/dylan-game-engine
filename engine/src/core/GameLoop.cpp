@@ -2,6 +2,8 @@
 #include "../ecs/systems/player_control_system.h"
 #include <SDL3/SDL.h>
 
+#include "imgui_impl_sdl3.h"
+
 #define FPS 60
 
 int run_game_loop(Application& app) {
@@ -13,6 +15,7 @@ int run_game_loop(Application& app) {
         Uint64 start = SDL_GetTicksNS();
 
         while (SDL_PollEvent(&e)) {
+            ImGui_ImplSDL3_ProcessEvent(&e);
             if (e.type == SDL_EVENT_QUIT) {
                 app.stop();
             }
